@@ -47,10 +47,16 @@ const displayUserRepos = function (repos) {
     for (const repo of repos) {
         const li = document.createElement("li");
         li.classList.add("repo");
+
+        // add button using appendChild
         const button = document.createElement("button");
         button.classList.add("repo-name");
         button.textContent = repo.name;
         li.appendChild(button);
+
+        // add button with html manually
+        // li.innerHTML = `<button type="button" class="repo-name">${repo.name}</button>`;
+
         // console.log(li);
         userRepoDiv.append(li);
     };
